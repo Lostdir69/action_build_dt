@@ -28,10 +28,9 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Configuring the environment
-      run: sudo apt update
-           sudo apt upgrade
-           sudo apt install git cpio wget aria2 brotli android-sdk-libsparse-utils android-sdk-ext4-utils python3.9
-           pip install twrpdtgen
+      run: sudo apt update -y
+           sudo apt upgrade -y
+           sudo apt install git cpio wget aria2 brotli android-sdk-libsparse-utils android-sdk-ext4-utils python3.9 -y           pip install twrpdtgen
 
     - name: download the image
       run: pwd
