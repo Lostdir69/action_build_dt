@@ -12,6 +12,10 @@ on:
         description: 'the url of boot or recovery'
         required: true
         default: 'World'
+      image name:
+        description: 'the name of image'
+        required: true
+        default: 'recovery.img'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
