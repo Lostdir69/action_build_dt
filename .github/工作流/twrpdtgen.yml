@@ -27,5 +27,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
+    - name: Configuring the environment
+      run: sudo apt update
+           sudo apt upgrade
+           sudo apt install git cpio wget aria2 brotli android-sdk-libsparse-utils android-sdk-ext4-utils python3.9
