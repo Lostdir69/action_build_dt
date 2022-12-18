@@ -26,7 +26,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - name clean up the environment
+      run: - uses: actions/checkout@v2
+      # Cleanup The Actions Workspace Using Custom Composite Run Actions
+      - uses: rokibhasansagar/slimhub_actions@main
     # Runs a single command using the runners shell
+
     - name: Configuring the environment
       run: sudo apt -y install git cpio wget aria2 brotli android-sdk-libsparse-utils android-sdk-ext4-utils python3.9 pip
            sudo apt update
