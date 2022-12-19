@@ -28,7 +28,12 @@ jobs:
     steps:
     - name: Configuring the environment
       run: sudo apt -y install git cpio wget aria2 brotli android-sdk-libsparse-utils android-sdk-ext4-utils python3.9 pip
-           python3.9 -m pip install twrpdtgen
-
+           wget https://pypi.python.org/packages/source/p/pip/pip-18.1.tar.gz
+           tar -zxvf pip-18.1.tar.gz
+           cd pip-18.1
+           python3.9 setup.py build 
+           python3.9 setup.py install
+           pip3 install twrpdtgen
+           
     - name: download the image
       run: pwd
