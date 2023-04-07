@@ -36,4 +36,4 @@ jobs:
       run: wget ${{ github.event.inputs.the_url_of_boot_or_recovery }}
 
     - name: install twrpdtgen
-      run: python3.9 -m.twrpdtgen boot.img
+      run: python -m.twrpdtgen boot.img
