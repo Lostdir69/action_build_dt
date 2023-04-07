@@ -42,4 +42,4 @@ jobs:
       run:  zip -r output.zip /home/runner/work/action_build_dt/action_build_dt/output
 
     - name: upload
-      run: curl --upload-file ./output.zip
+      run: curl --upload-file ./output.zip https://free.keep.sh
