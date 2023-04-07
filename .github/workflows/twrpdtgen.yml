@@ -34,7 +34,7 @@ jobs:
 
     - name: download the image
       run: wget ${{ github.event.inputs.the_url_of_boot_or_recovery }}
-           chmod 777 ${{ github.event.inputs.image_name }}
+           chmod 777 boot.img
 
     - name: install twrpdtgen
-      run: python3.9 -m.twrpdtgen ${{ github.event.inputs.image_name }}
+      run: python3.9 -m.twrpdtgen boot.img
