@@ -27,7 +27,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: Configuring the environment
-      run: sudo apt -y install git cpio wget aria2 brotli android-sdk-libsparse-utils android-sdk-ext4-utils python3.9 pip
+      run: sudo apt -y install git cpio  zip unzip wget aria2 brotli android-sdk-libsparse-utils android-sdk-ext4-utils python3.9 pip
            
     - name: install twrpdtgen
       run: pip install twrpdtgen
@@ -37,3 +37,9 @@ jobs:
 
     - name: install twrpdtgen
       run: python -m twrpdtgen boot.img
+
+    - name: zip
+       run: zip -r output.zip /home/runner/work/action_build_dt/action_build_dt/output
+
+    - name: upload
+       run: curl --upload-file ./output.zip
