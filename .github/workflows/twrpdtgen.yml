@@ -36,10 +36,10 @@ jobs:
       run: wget ${{ github.event.inputs.the_url_of_boot_or_recovery }}
 
     - name: install twrpdtgen
-      run: python -m twrpdtgen boot.img
+      run:  python -m twrpdtgen boot.img
 
-    - name: zip
-       run: zip -r output.zip /home/runner/work/action_build_dt/action_build_dt/output
+    - name:  zip
+      run:  zip -r output.zip /home/runner/work/action_build_dt/action_build_dt/output
 
     - name: upload
-       run: curl --upload-file ./output.zip
+      run: curl --upload-file ./output.zip
